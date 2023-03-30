@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
-export const DotButton = styled.button<{ currentIndex: number; index: number }>`
+type DotButtonPropsType = {
+  currentIndex: number;
+  index: number;
+};
+
+const dotColor = ({currentIndex, index}: DotButtonPropsType) =>
+  currentIndex === index ? "var(--orange)" : "var(--gray)";
+
+export const DotButton = styled.button<DotButtonPropsType>`
   border: none;
   font-size: 24px;
-  color: ${(props) => props.currentIndex === props.index ? "var(--orange)" : "var(--gray)"};
+  color: ${dotColor};
   background: none;
   cursor: pointer;
   transition: color 0.5s;
