@@ -1,5 +1,3 @@
-import { DataType } from "./Data";
+import { SliderType } from "./Slider";
 
-export type PhotoSliderType = {
-  photos: DataType[];
-};
+export type PhotoSliderType = SliderType;

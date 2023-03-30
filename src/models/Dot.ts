@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
+import { CurrentIndexType } from './CurrentIndex';
 
 export type DotType = {
   id: string;
   index: number;
-  currentIndex: number;
-  setCurrentIndex: Dispatch<SetStateAction<number>>;
-};
+} & CurrentIndexType;
