@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { photoAPI } from "./API/api";
-import { Loading } from "./assets/common/Loading/Loading";
-import { Error } from "./assets/common/Error/Error";
+import { photoAPI } from "./api/api";
+import { Loading } from "./components/Loading/Loading";
+import { Error } from "./components/Error/Error";
 import { Slider } from "./components/Slider/Slider";
 import { DataType } from "./models/Data";
 
@@ -18,11 +18,12 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading && !photos.length) return <Loading />;
 
   if (error) return <Error err={error} />;
 
-  return <Slider photos={photos} />;
+  return <>
+  {loading ? <Loading /> : <Slider items={photos} />}
+  </>;
 }
 
 export default App;

@@ -27,6 +27,6 @@ code {
   --white: #ffffff;
   --gray: #ada1a5;
   --black: rgba(255, 255, 255, 0);
-  --opacity: rgba(255, 255, 255, 0.7);
+  --opacity: rgba(255, 255, 255, 0.5);
   --orange: rgba(255, 165, 0, 0.5)
 }

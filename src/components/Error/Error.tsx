@@ -1,6 +1,6 @@
 import React from "react";
-import error from "./../../images/error.svg";
-import { ErrorType } from "../../../models/Error";
+import error from "./../../assets/images/error.svg";
+import { ErrorType } from "../../models/Error";
 import { ErrorBlock, ErrorDescription, ErrorImg, ErrorTitle } from "./ErrorStyle";
 
 export const Error: React.FC<ErrorType> = ({ err }) => {
