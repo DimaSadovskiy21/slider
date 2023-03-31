@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { photoAPI } from "./api/api";
-import { Loading } from "./components/Loading/Loading";
-import { Error } from "./components/Error/Error";
-import { Slider } from "./components/Slider/Slider";
+import { Error, Loading, Slider } from "./components";
+
 import { DataType } from "./models/Data";
 
 function App() {

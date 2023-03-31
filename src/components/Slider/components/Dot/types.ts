@@ -6,6 +6,4 @@ export interface IDot extends Omit<IDots, "items"> {
 
 export type TDotStyled = Omit<IDot, "setOffset">;
 
-export type TIsActive = TDotStyled;
-
 export type TGetIndexOffsetType = Omit<TDotStyled, "offset">;

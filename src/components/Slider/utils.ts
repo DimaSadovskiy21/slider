@@ -1,3 +1,3 @@
-import { TIsDisabled } from "./types";
+import { TCheckIsDisabled } from "./types";
 
-export const isDisabled = ({ offset, itemsLength }: TIsDisabled) => offset === (itemsLength - 1) * 100;
+export const checkIsDisabled = ({ offset, itemsLength }: TCheckIsDisabled) => offset === (itemsLength - 1) * 100;

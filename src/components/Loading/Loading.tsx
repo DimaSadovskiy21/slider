@@ -1,8 +1,5 @@
-import React from "react";
-import { Loader } from "./LoadingStyle";
+import { LoaderStyled } from "./styles";
 
 export const Loading = () => {
-  return <Loader />;
+  return <LoaderStyled />;
 };
-
-

@@ -1,8 +1,12 @@
 import { FC, useState } from "react";
-import { Dots, SliderButton } from "./components";
+
+import { Dots, Items, SliderButton } from "./components";
+
 import { SliderContainer, SliderStyled } from "./styles";
+
 import { ISlider } from "./types";
-import { isDisabled } from "./utils";
+
+import { checkIsDisabled } from "./utils";
 
 export const Slider: FC<ISlider> = ({ items }) => {
   const [offset, setOffset] = useState(0);
@@ -17,43 +21,24 @@ export const Slider: FC<ISlider> = ({ items }) => {
 
   const itemsLength = items.length;
 
+  const isDisabled = checkIsDisabled({ offset, itemsLength });
+
   return (
     <SliderContainer>
       <SliderButton
         buttonType="prev"
-        handler={handlePrevClick}
+        onClick={handlePrevClick}
         disabled={!offset}
-      >
-        ❰
-      </SliderButton>
+      />
+
       <SliderButton
-        disabled={isDisabled({ offset, itemsLength })}
         buttonType="next"
-        handler={handleNextClick}
-      >
-        ❱
-      </SliderButton>
+        onClick={handleNextClick}
+        disabled={isDisabled}
+      />
+
       <SliderStyled>
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            transition: "all 0.5s",
-            transform: `translateX(-${offset}%)`,
-          }}
-        >
-          {items.map((el) => (
-            <img
-              style={{
-                height: "100%",
-                minWidth: "100%",
-                maxWidth: "100%",
-              }}
-              src={el.url}
-              alt={el.title}
-            />
-          ))}
-        </div>
+        <Items offset={offset} items={items} />
       </SliderStyled>
 
       <Dots items={items} offset={offset} setOffset={setOffset} />

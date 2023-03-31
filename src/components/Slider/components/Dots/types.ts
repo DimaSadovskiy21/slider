@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+
 import { DataType } from "../../../../models/Data";
 
 export interface IDots {

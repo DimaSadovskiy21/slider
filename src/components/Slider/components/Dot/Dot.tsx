@@ -1,18 +1,23 @@
 import { FC } from "react";
+
 import { DotStyled } from "./styles";
+
 import { IDot } from "./types";
+
 import { getIndexOffsetType } from "./utils";
 
 export const Dot: FC<IDot> = ({ index, offset, setOffset }) => {
-  const onClickDotHandler = (index: number) => () => {
-    setOffset(getIndexOffsetType({ index }));
+  const indexOffsetType = getIndexOffsetType({ index });
+
+  const onClickDotHandler = () => {
+    setOffset(indexOffsetType);
   };
 
   return (
     <DotStyled
       offset={offset}
-      index={getIndexOffsetType({ index })}
-      onClick={onClickDotHandler(index)}
+      index={indexOffsetType}
+      onClick={onClickDotHandler}
     >
       ●
     </DotStyled>

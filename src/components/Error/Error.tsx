@@ -1,15 +1,18 @@
-import React from "react";
-import error from "./../../assets/images/error.svg";
-import { ErrorType } from "../../models/Error";
-import { ErrorBlock, ErrorDescription, ErrorImg, ErrorTitle } from "./ErrorStyle";
+import { FC } from "react";
 
-export const Error: React.FC<ErrorType> = ({ err }) => {
+import error from "./../../assets/vectors/error.svg";
+
+import { ErrorStyled, ErrorDescription, ErrorImg, ErrorTitle } from "./styles";
+
+import { IErrorType } from "./types";
+
+export const Error:FC<IErrorType> = ({ err }) => {
   return (
-    <ErrorBlock>
+    <ErrorStyled>
       <ErrorImg src={error} alt="error" />
       <ErrorTitle>Error!</ErrorTitle>
       <ErrorDescription>{err}</ErrorDescription>
-    </ErrorBlock>
+    </ErrorStyled>
   );
 };
 

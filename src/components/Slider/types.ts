@@ -4,7 +4,7 @@ export interface ISlider {
   items: DataType[];
 }
 
-export type TIsDisabled = {
+export type TCheckIsDisabled = {
   offset: number;
   itemsLength: number;
 };
