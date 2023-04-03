@@ -1,8 +1,9 @@
-import { DataType } from "./../../../../models/Data";
+import { TData } from "types";
+
 
 export interface TItems {
   offset: number;
-  items: DataType[];
+  items: TData[];
 }
 
-export type TItemsStyled = Omit<TItems, 'items'>
+export type TItemsStyled = Omit<TItems, 'items'>;

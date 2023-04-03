@@ -1,4 +1,4 @@
-export type DataType = {
+export type TData = {
   id: string;
   title: string;
   url: string;

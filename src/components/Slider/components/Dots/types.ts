@@ -1,9 +1,8 @@
-import { Dispatch, SetStateAction } from "react";
-
-import { DataType } from "../../../../models/Data";
+import { Dispatch, SetStateAction } from 'react';
+import { TData } from 'types';
 
 export interface IDots {
-  items: DataType[];
+  items: TData[];
   offset: number;
-  setOffset: Dispatch<SetStateAction<number>>
+  setOffset: Dispatch<SetStateAction<number>>;
 }

@@ -1,7 +1,7 @@
-import { DataType } from "../../models/Data";
+import { TData } from 'types';
 
 export interface ISlider {
-  items: DataType[];
+  items: TData[];
 }
 
 export type TCheckIsDisabled = {
