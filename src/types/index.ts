@@ -1,4 +1,1 @@
-import { TData } from "./Data";
-
-
-export type { TData };
+export type { TData } from "./data";

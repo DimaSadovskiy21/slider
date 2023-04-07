@@ -1,5 +1,2 @@
-import { IDots } from "./types";
-import { Dots } from "./Dots";
-
-export { Dots };
-export type { IDots };
+export type { IDots } from "./types";
+export { Dots } from "./Dots";

@@ -1,5 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
-import { TData } from 'types';
+import { Dispatch, SetStateAction } from "react";
+
+import { TData } from "types";
 
 export interface IDots {
   items: TData[];

@@ -1,11 +1,8 @@
 import { FC, useState } from "react";
 
 import { Dots, Items, SliderButton } from "./components";
-
-import { SliderContainer, SliderStyled } from "./styles";
-
+import { SliderContainer, SliderBox } from "./styles";
 import { ISlider } from "./types";
-
 import { checkIsDisabled } from "./utils";
 
 export const Slider: FC<ISlider> = ({ items }) => {
@@ -37,9 +34,9 @@ export const Slider: FC<ISlider> = ({ items }) => {
         disabled={isDisabled}
       />
 
-      <SliderStyled>
+      <SliderBox>
         <Items offset={offset} items={items} />
-      </SliderStyled>
+      </SliderBox>
 
       <Dots items={items} offset={offset} setOffset={setOffset} />
     </SliderContainer>

@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
+import { Error } from "assets";
+
 export const ErrorStyled = styled("div")({
   display: "grid",
-  gridTemplateAreas: 
-    `"i t"
+  gridTemplateAreas: `"i t"
     "i d"`,
   gap: "0 30px",
 });
 
-export const ErrorImg = styled("img")({
+export const ErrorVector = styled(Error)({
   gridArea: "i",
 });
 

@@ -1,7 +1,5 @@
-import { Slider } from 'pages';
+import { SliderPage } from "pages";
 
-function App() {
-  return <Slider />;
-}
+const App = () => <SliderPage />;
 
 export default App;

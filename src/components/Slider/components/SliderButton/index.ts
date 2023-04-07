@@ -1,3 +1,3 @@
-import { SliderButton } from "./SliderButton";
+export { SliderButton } from "./SliderButton";
 
-export { SliderButton };
+

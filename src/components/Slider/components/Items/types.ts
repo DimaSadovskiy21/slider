@@ -1,6 +1,5 @@
 import { TData } from "types";
 
-
 export interface TItems {
   offset: number;
   items: TData[];

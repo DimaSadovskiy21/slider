@@ -1,3 +1,1 @@
-import error from './error.svg';
-
-export { error };
+export { ReactComponent as Error }from './error.svg';

@@ -1,14 +1,12 @@
-import { data } from 'data';
-import { TData } from 'types';
-
-
+import { data } from "data";
+import { TData } from "types";
 
 export const api = {
-  getItems(error = false) {
-    return new Promise<TData[]>((res, rej) => {
-      error
-        ? setTimeout(() => rej('Андрюшка, дай почесать за ушком!'), 3000)
-        : setTimeout(() => res(data), 3000);
-    });
-  },
+  getItems: (error = false) =>
+    new Promise<TData[]>((res, rej) =>
+      setTimeout(
+        () => (error ? rej("Андрюшка, дай почесать за ушком!") : res(data)),
+        3000
+      )
+    ),
 };

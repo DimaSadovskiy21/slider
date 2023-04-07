@@ -1,5 +1,5 @@
-import { Items } from './Items/Items';
-import { SliderButton } from "./SliderButton";
-import { Dots } from "./Dots";
+export { Items } from './Items/Items';
+export { SliderButton } from "./SliderButton";
+export { Dots } from "./Dots";
 
-export { Dots, SliderButton, Items };
+
