@@ -4,7 +4,7 @@ import { useGetData } from 'api/useGetData';
 import { TData } from 'types';
 
 const SliderPage = () => {
-  const {items, isLoading, error} = useGetData<TData[] | undefined>(api.getItems());
+  const {items, isLoading, error} = useGetData<TData[]>(api.getItems());
 
   if (error) return <Error message={error} />;
 
