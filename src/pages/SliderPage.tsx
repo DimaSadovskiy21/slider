@@ -1,6 +1,5 @@
-import { api } from 'api';
+import { api, useGetData } from 'api';
 import { Error, Loader, Slider } from 'components';
-import { useGetData } from 'api/useGetData';
 import { TData } from 'types';
 
 const SliderPage = () => {
