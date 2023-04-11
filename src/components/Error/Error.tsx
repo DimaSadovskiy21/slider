@@ -1,17 +1,17 @@
 import { FC } from "react";
 
 import {
-  ErrorStyled,
+  ErrorContainer,
   ErrorDescription,
   ErrorVector,
   ErrorTitle,
 } from "./styles";
 import { IErrorType } from "./types";
 
-export const Error: FC<IErrorType> = ({ err }) => (
-  <ErrorStyled>
+export const Error: FC<IErrorType> = ({ message }) => (
+  <ErrorContainer>
     <ErrorVector />
     <ErrorTitle>Error!</ErrorTitle>
-    <ErrorDescription>{err}</ErrorDescription>
-  </ErrorStyled>
+    <ErrorDescription>{message}</ErrorDescription>
+  </ErrorContainer>
 );

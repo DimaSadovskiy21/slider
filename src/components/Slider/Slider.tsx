@@ -1,7 +1,13 @@
 import { FC, useState } from "react";
 
-import { Dots, Items, SliderButton } from "./components";
-import { SliderContainer, SliderBox } from "./styles";
+import { Dot, SliderButton } from "./components";
+import {
+  SliderContainer,
+  SliderBox,
+  ItemsContainer,
+  Item,
+  DotsContainer,
+} from "./styles";
 import { ISlider } from "./types";
 import { checkIsDisabled } from "./utils";
 
@@ -35,10 +41,18 @@ export const Slider: FC<ISlider> = ({ items }) => {
       />
 
       <SliderBox>
-        <Items offset={offset} items={items} />
+        <ItemsContainer offset={offset}>
+          {items.map(({ id, url, title }) => (
+            <Item key={id} src={url} alt={title} />
+          ))}
+        </ItemsContainer>
       </SliderBox>
 
-      <Dots items={items} offset={offset} setOffset={setOffset} />
+      <DotsContainer>
+        {items.map(({ id }, index) => (
+          <Dot key={id} index={index} offset={offset} setOffset={setOffset} />
+        ))}
+      </DotsContainer>
     </SliderContainer>
   );
 };

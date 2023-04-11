@@ -1,7 +1,5 @@
-import France from './France.jpeg';
-import Germany from './Germany.jpg';
-import Iceland from './Iceland.jpg';
-import Norway from './Norway.jpg';
-import USA from './usa.jpg';
-
-export { France, Germany, Iceland, Norway, USA };
+export { default as France } from "./France.jpeg";
+export { default as Germany } from "./Germany.jpg";
+export { default as Iceland } from "./Iceland.jpg";
+export { default as Norway } from "./Norway.jpg";
+export { default as USA } from "./usa.jpg";

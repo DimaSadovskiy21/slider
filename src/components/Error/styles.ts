@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { Error } from "assets";
 
-export const ErrorStyled = styled("div")({
+export const ErrorContainer = styled("div")({
   display: "grid",
   gridTemplateAreas: `"i t"
     "i d"`,

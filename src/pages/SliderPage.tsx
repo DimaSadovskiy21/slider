@@ -1,25 +1,14 @@
-import { useEffect, useState } from 'react';
-
-import { TData } from 'types';
 import { api } from 'api';
 import { Error, Loader, Slider } from 'components';
+import { useGetData } from 'api/useGetData';
+import { TData } from 'types';
 
 const SliderPage = () => {
-  const [items, setItems] = useState<TData[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const {items, isLoading, error} = useGetData<TData[] | undefined>(api.getItems());
 
-  useEffect(() => {
-    api
-      .getItems()
-      .then((data) => setItems(data))
-      .catch((err) => setError(err))
-      .finally(() => setLoading(false));
-  }, []);
+  if (error) return <Error message={error} />;
 
-  if (error) return <Error err={error} />;
-
-  return <>{loading ? <Loader /> : <Slider items={items} />}</>;
+  return <>{isLoading ? <Loader /> : items && <Slider items={items} />}</>;
 };
 
 export default SliderPage;

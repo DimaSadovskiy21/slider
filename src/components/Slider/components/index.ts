@@ -1,5 +1,2 @@
-export { Items } from './Items/Items';
+export { Dot } from "./Dot";
 export { SliderButton } from "./SliderButton";
-export { Dots } from "./Dots";
-
-

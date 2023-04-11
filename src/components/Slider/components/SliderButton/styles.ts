@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { IButtonStyled } from "./types";
 
-export const ButtonStyled = styled('button')<IButtonStyled>(({buttonType, disabled}) => ({
+export const ButtonContainer = styled('button')<IButtonStyled>(({buttonType, disabled}) => ({
   position: 'absolute',
   top: '50%',
   left: buttonType === "prev" ? '32px' : '',

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoaderStyled = styled('div')({
+export const LoaderContainer = styled('div')({
   position: 'relative',
   backgroundColor: 'var(--gray)',
   height: '150px',

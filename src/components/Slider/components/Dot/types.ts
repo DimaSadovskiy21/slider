@@ -1,7 +1,9 @@
-import { IDots } from "../Dots";
+import { Dispatch, SetStateAction } from "react";
 
-export interface IDot extends Omit<IDots, "items"> {
+export interface IDot {
   index: number;
+  offset: number;
+  setOffset: Dispatch<SetStateAction<number>>;
 }
 
 export type TDotStyled = Omit<IDot, "setOffset">;

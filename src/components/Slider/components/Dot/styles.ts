@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { TDotStyled } from "./types";
 
-export const DotStyled = styled("button")<TDotStyled>(({ offset, index }) => ({
+export const DotContainer = styled("button")<TDotStyled>(({ offset, index }) => ({
   border: "none",
   fontSize: "24px",
   color: offset === index ? "var(--orange)" : "var(--gray)",

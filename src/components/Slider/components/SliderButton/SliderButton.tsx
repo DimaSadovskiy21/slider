@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { ButtonStyled } from "./styles";
+import { ButtonContainer } from "./styles";
 import { ISliderButton } from "./types";
 
 export const SliderButton: FC<ISliderButton> = ({
@@ -8,7 +8,7 @@ export const SliderButton: FC<ISliderButton> = ({
   onClick,
   disabled,
 }) => (
-  <ButtonStyled onClick={onClick} buttonType={buttonType} disabled={disabled}>
+  <ButtonContainer onClick={onClick} buttonType={buttonType} disabled={disabled}>
     {buttonType === "prev" ? "❰" : "❱"}
-  </ButtonStyled>
+  </ButtonContainer>
 );
