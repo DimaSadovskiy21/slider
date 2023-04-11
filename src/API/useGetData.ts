@@ -6,17 +6,17 @@ interface TUseGetData<TResponse> {
   error: string;
 }
 
-export function useGetData<T>(data: Promise<T>): TUseGetData<T> {
+export function useGetData<T>(fetch: Promise<T>): TUseGetData<T> {
   const [items, setItems] = useState<T>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    data
+    fetch
       .then((data) => setItems(data))
       .catch((err) => setError(err))
       .finally(() => setIsLoading(false));
-  }, [data]);
+  }, [fetch]);
 
   return { items, isLoading, error };
 }
